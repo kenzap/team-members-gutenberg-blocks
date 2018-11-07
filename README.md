@@ -6,7 +6,7 @@ To be used with WordPress Gutenberg.
 
 ![Create beatiful team members section with Gutenberg](https://kenzap.com/website/img/screenshot-1.png)
 
-<b>Block is easy customiable:</b>
+<b>Block is easy customizable:</b>
 
 <ul>
 <li>Increase avatar Size</li>
