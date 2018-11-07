@@ -1,0 +1,213 @@
+.kenzap-members-editor{
+    display:flex;
+	align-items:center;
+	justify-content:center;
+	flex-wrap:wrap;
+	margin:0 0 10px;
+}
+
+.kenzap-members-editor .member-block{
+	display:flex;
+	align-items:center;
+	justify-content:center;
+	flex-wrap:wrap;
+	margin:0 0 10px;
+}
+
+.kenzap-members-editor .member-block .member-info{
+	/* width: 17%; */
+	text-align:center;
+	transition:all .2s;
+	padding: 30px 20px;
+	margin: 0 50px;
+	position:relative;
+}
+
+.kenzap-members-editor .member-block .member-hover:hover{
+	-webkit-box-shadow: 5px 5px 10px 3px rgba(187,187,187,0.32);
+	-moz-box-shadow: 5px 5px 10px 3px rgba(187,187,187,0.32);
+	box-shadow: 5px 5px 10px 3px rgba(187,187,187,0.32);
+	z-index:10;
+}
+
+.kenzap-members-editor .member-block .member-info .member-image {
+    display:block;
+	margin:0 auto;
+	max-width:100%;
+	border-radius: 50%;
+	border: 5px solid #3498db;
+    margin: 0 auto 16px;
+    width: 150px;
+    height: 150px;
+}
+
+.kenzap-members-editor .member-block .member-info .member-image button.button-visible:hover{
+    color:#3498db;
+}
+
+.kenzap-members-editor .member-block .member-info .member-image button.button-visible{
+    margin-top: 40%;
+    background: transparent;
+}
+
+.kenzap-members-editor .member-block .member-info .member-image button.image-button:focus,
+.kenzap-members-editor .member-block .member-info .member-image button.image-button:active{
+    background-color: transparent!important;
+    border: 0!important;
+    box-shadow: none!important;
+    outline: 0!important;
+}
+
+.kenzap-members-editor .member-block .member-info .member-image button{
+    margin-top: 0px;
+    padding:0;
+}
+
+.kenzap-members-editor .member-block .member-right,
+.kenzap-members-editor .member-block .member-left,
+.kenzap-members-editor .member-block .member-remove {
+    opacity: 0;
+    position: absolute;
+    top: -8px;
+    left: -10px;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    background-color: #ddd;
+    color: #fff;
+    border-radius: 50%;
+}
+
+.kenzap-members-editor .member-block .member-left,
+.kenzap-members-editor .member-block .member-right{
+    background-color: transparent;
+    color: #ccc;
+    width: 30px;
+    height: 30px;
+    right: -14px;
+    left:auto;
+    top:45%;
+}
+
+.kenzap-members-editor .member-block:hover .member-remove,
+.kenzap-members-editor .member-block:hover .member-right,
+.kenzap-members-editor .member-block:hover .member-left{
+    opacity: 1;
+}
+
+.kenzap-members-editor .member-block .member-left svg,
+.kenzap-members-editor .member-block .member-right svg{
+    width:40px;
+    height:40px;
+}
+
+.kenzap-members-editor .member-block .member-left{
+    left: -27px;
+    right: auto;
+}
+
+.kenzap-members-editor .member-block .social-add{
+    float: right;
+    margin-right: -30px;
+    line-height: 1.8;
+    font-size: 1.2em;
+    cursor:pointer;
+}
+
+.kenzap-members-editor .member-block .member-info img.avatar{
+    border-radius:50%;
+    width: 140px;
+    height: 140px;
+    object-fit: cover;
+    margin:0 0 24px;
+}
+
+.kenzap-members-editor .member-block .member-info h3{
+	color:#252525;
+	font-size:18px;
+	line-height:22px;
+	margin:0 0 10px;
+	font-weight:500;
+}
+
+.kenzap-members-editor .member-block .member-info p{
+	color:#909090;
+	font-size:15px;
+	line-height:15px;
+	margin:0 0 15px;
+	hyphens:none;
+}
+
+.kenzap-members-editor .member-block .member-info .member-social{
+	padding:0;
+	margin:0;
+	list-style:none;
+	opacity:1;
+}
+
+.kenzap-members-editor .member-block .member-info .member-social li{
+	display:inline-block;
+    padding:0 5px;
+    cursor: pointer;
+}
+
+.kenzap-members-editor .member-block .member-info .member-social li i{
+	color:#b6b6b6;
+	font-size:17px;
+}
+
+.kenzap-members-editor .member-block .member-info .member-social li i{
+    color:var(--icolor, #3498db); 
+}
+
+.kenzap-members-editor .member-block .member-info .member-social li:hover i{
+    color:#3498db; 
+    color:var(--hcolor, #3498db);
+}
+
+.kenzap-members-editor .section-footer{
+	text-align:center
+}
+
+.kenzap-members-icon-item-cont{
+    display: flex;
+    flex: auto;
+    flex-wrap: wrap;
+}
+
+.kenzap-members-icon-item {
+    display: inline-block;
+    min-width: 25%;
+    text-align: center;
+    margin: 8px 0;
+    cursor: pointer;
+}
+
+.kenzap-members-icon-item i:hover{
+    color: var(--hcolor, #3498db);
+}
+
+.kenzap-members-icon-item i{
+    font-size: 18px;
+}
+
+.kenzap-members-icon-item i.active{
+    color: var(--hcolor, #3498db);
+}
+
+.member-controls{
+    text-align: center;
+}
+
+.member-controls button{
+    border: 1px solid var(--hcolor, #3498db);
+    box-shadow:none;
+}
+
+.edit-post-sidebar .bg-preview{
+    max-width: 100px;
+    height: 30px;
+    object-fit: cover;
+    margin-left: 10px;
+    cursor: pointer;
+}
