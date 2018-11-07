@@ -3,6 +3,9 @@
 Create beatiful team members section on your website. 
 To be used with WordPress Gutenberg.
 
+
+![Create beatiful team members section with Gutenberg](https://kenzap.com/website/img/screenshot-1.png)
+
 <b>Block is easy customiable:</b>
 
 <ul>
