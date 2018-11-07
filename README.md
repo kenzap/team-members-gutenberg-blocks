@@ -1,6 +1,6 @@
 # Team Members Gutenberg Blocks
 
-Create beatiful team members section on your website. 
+Create beautiful team members section on your website. 
 To be used with WordPress Gutenberg.
 
 
