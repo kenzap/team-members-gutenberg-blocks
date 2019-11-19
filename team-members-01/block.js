@@ -78,7 +78,7 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.txt
         "repeat":"auto"
     };
 
-    blocks.registerBlockType( 'kenzap-kenzap-members/block-01', {
+    blocks.registerBlockType( 'kenzap-team-members/block-01', {
         title: 'Kenzap Team Members',
         description: __( 'List team members beautifully.' ),
         keywords: [ __( 'members' ),  __( 'users' ), __( 'people' ) ],
@@ -299,7 +299,7 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.txt
                     el( InspectorControls,
                         null,
                         el( PanelBody,
-                            { title: __( 'General' ), initialOpen: false },
+                            { title: __( 'General', 'kenzap-team-members' ), initialOpen: false },
                             el(PanelColorSettings, { 
                                     title: __('Highlight Color'), 
                                     initialOpen: true,
@@ -595,7 +595,7 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.txt
                                     }
                                 })
                             ),
-                            el(SelectControl, {
+                            backgroundImageUrl && el(SelectControl, {
                                 label: __('Background style'),
                                 value: bgAlignment,
                                 options: [
@@ -609,6 +609,9 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.txt
                                     return setAttributes({ bgAlignment: value });
                                 },
                             }),
+                        ),
+                        el( PanelBody,
+                            { title: __( 'Container' ), initialOpen: false },
                             el(RadioControl, {
                                 label: __('Alignment'),
                                 selected: contAlignment,
@@ -621,15 +624,15 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.txt
                                     return setAttributes({ contAlignment: value });
                                 },
                             }),
-                            contAlignment == 'fullwidth' && el(RangeControl, {
+                            el(RangeControl, {
                                 label: __('Max width'),
                                 value: maxContWidth || '',
                                 onChange: function onChange(size) {
                                     return setAttributes({ maxContWidth: size });
                                 },
-                                help: __('Restrict the layout width for content children.'),
-                                min: 500,
-                                max: 1500,
+                                help: __('Restrict layout width for content children.'),
+                                min: 450,
+                                max: 2000,
                             }),
                             el(RangeControl, {
                                 label: __('Top and bottom paddings'),
@@ -637,11 +640,11 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.txt
                                 onChange: function onChange(size) {
                                     return setAttributes({ bgPadding: size });
                                 },
-                                help: __('Useful when you want to extend backround image vertical size.'),
+                                help: __('Useful when you want to extend backround image vertical size or create more space.'),
                                 min: 0,
-                                max: 100,
+                                max: 200,
                             }),
-                        ),
+                        )
                     ),
                     el(
                         "div",
@@ -1036,7 +1039,8 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.txt
                                                             "a", { 
                                                                 className: "member-a",
                                                                 href: ((typeof items[index].icons[indexs] === "undefined")?"#":items[index].icons[indexs].link),
-                                                                target: "_blank"
+                                                                target: "_blank",
+                                                                rel: "noopener noreferrer"
                                                             },
                                                             items[index].icons[indexs].type ==  'custom' && el(
                                                                 "img", {
@@ -1052,10 +1056,12 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.txt
                                                                 "i", {   
                                                                     className: "fa fa-"+items[index].icons[indexs].type,
                                                                     style: {
+                                                                        
                                                                         width: iconSize,
                                                                         fontSize: iconSize,
                                                                         "--hcolor": avatarBorderColor, 
                                                                         "--icolor": textColor3,
+                                                                        "--testval": iconSize+" ",
                                                                     }
                                                                 },
                                                             )

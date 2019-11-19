@@ -1,9 +1,9 @@
-Plugin Name: Kenzap Team Members Gutenberg Blocks
+Kenzap Team Members Gutenberg Blocks
 Contributors: kenzap
 Tags: team, members, users, gutenberg
-Requires at least: 4.9
-Tested up to: 5.0
-Stable tag: 1.0.0
+Requires at least: 5.0
+Tested up to: 5.1.9
+Stable tag: 1.0.2
 Donate link: https://kenzap.com/wordpress-plugin-donation-page/
 Requires PHP: 5.6
 License: GPL2+
@@ -62,3 +62,12 @@ This is a first release
 
 = v1.0.0 =
 New: Initial release
+
+= v1.0.1 =
+Update: Frontend CSS improvements for various WordPress themes
+Update: Alt attributes added to images automatically to pass HTML validation test
+New: Move left/right items of a block
+
+
+= v1.0.2 =
+Update: Crash fix related to social links and latest WordPress update

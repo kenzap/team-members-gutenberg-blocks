@@ -23,10 +23,13 @@
 	margin-left: calc(50% - 50vw);
 }
 
+.kenzap-members > div{
+	margin: 0 auto;
+}
+
 .kenzap-members.fullwidth > div{
 	width: 100%;
 	max-width: 100%;
-	margin: 0 auto;
 }
 
 .kenzap-members > div{
@@ -34,7 +37,7 @@
 	align-items:center;
 	justify-content:center;
 	flex-wrap:wrap;
-	margin:0 0 10px;
+	/* margin:0 0 10px; */
 }
 
 .kenzap-members .member-block{
